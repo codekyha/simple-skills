@@ -57,11 +57,12 @@ Skills need a Pro, Max, Team, or Enterprise plan with code execution enabled
    switch the skill on.
 
 Some documentation labels the settings page *Features* rather than *Capabilities*.
-Uploaded skills are private to your account and do not sync to the API or to Claude
-Code, so each team member uploads separately.
+Uploaded skills are private to your account, so each team member uploads separately;
+a skill uploaded here is not available through the Claude API, which has its own upload.
 
 If a `.skill` file is presented in a Claude conversation, its file card offers a
-**Save skill** button that installs it without the steps above. The packaging script
+**Save skill** button (where your organization allows skill creation) that installs it
+without the steps above. The packaging script
 bundled with Anthropic's `skill-creator` example skill produces the same kind of file (a
 ZIP archive) and validates the frontmatter first; run it from the `skill-creator`
 directory:
@@ -95,7 +96,7 @@ Copy-Item -Recurse .\research-paper-analyzer "$HOME\.claude\skills\"
 ```
 
 Claude Code watches these directories, so adding or editing a skill takes effect in the
-current session without a restart. The one exception is a skills directory that did not
+current session without a restart. The main exception is a top-level skills directory that did not
 exist when the session started; run `/reload-skills` in that case. Invoke the skill
 directly with `/research-paper-analyzer`, or make a request that matches its description
 and Claude loads it on its own.
@@ -159,7 +160,7 @@ papers, `8 -> 7 -> 12 -> 13` for deep reading of one paper.
   environments without true parallel subagent execution.
 - `research-paper-analyzer` adapts a series of prompts for analyzing research papers
   posted on Threads by Hamidullah Khan, PhD
-  ([@iamkhanphd](https://www.threads.com/@iamkhanphd/post/DemET4pEUvB)). The prompt
+  (@iamkhanphd; [lead post](https://www.threads.com/@iamkhanphd/post/DemET4pEUvB)). The prompt
   texts were reconstructed from the series and are not reproduced verbatim. The
   shared ledger, the paper-type evidence rubric, the evidence tiers, the pipeline
   ordering, and the verification checklist are additions made here.

@@ -37,9 +37,9 @@ paper analysis usually goes wrong.
    supports, and what you infer. Label inferences as inferences. The value of the whole
    exercise sits in the distance between the first two layers, and blending them hides it.
 3. **Be specific or say nothing.** A gap, flaw, or follow-up question counts only if it
-   names the finding, number, method choice, or limitation that motivates it. The test
-   is whether the sentence could be pasted unchanged into a different paper in the same
-   field. If it could, it is not finished.
+   names the finding, number, method choice, or limitation that motivates it. Apply the
+   paste test: could the sentence be pasted unchanged into a different paper in the same
+   field? If it could, it is not finished.
 4. **Treat "not reported" as an answer.** Never fill an empty cell with a plausible
    value. Write NR, and when the absence matters (no confidence intervals, no
    convergence test, no stated sample size) say why.
@@ -142,7 +142,8 @@ the paper's type actually offers.
 
 ### Evidence tiers
 
-Used by modes 2, 8, 9, and the single-paper pass. Assign a tier per claim, with a
+Used by modes 2 and 9 and by the single-paper pass (mode 8 records the kind of link
+between claim and evidence instead). Assign a tier per claim, with a
 one-line reason.
 
 - **Strong.** Demonstrated in this paper by a method suited to the claim, with
